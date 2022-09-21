@@ -12,9 +12,10 @@ import numpy as np
 #forward difference method
 def deriv_sin_fwd(x,h=0.01):
     return(np.sin(x+h) - np.sin(x)) / h
-#backwards difference method
+q#backwards difference method
 def deriv_sin_bck(x,h=0.01):
     return(np.sin(x) - np.sin(x-h)) / h
+#central difference method
 def deriv_sin_fun(x,h=0.01):
     return(np.sin(x+h)-f(x-h)) / 2h
         

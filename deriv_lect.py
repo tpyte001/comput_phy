@@ -28,6 +28,10 @@ print(deriv_sin_bck(np.pi))
 
 print(deriv_sin(np.pi/3))
 
+check = deriv_sin(np.pi/3) / deriv_sin(np.pi/3)
+
+print(check)
+
 
 
 
