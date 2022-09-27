@@ -26,6 +26,7 @@ def deltah(x):
     print(errorThree)
     print(errorFour)
     print(errorFive)
+    #format these for 4 decimal places
     
 print('Percent Accuracy')
 deltah(x)
