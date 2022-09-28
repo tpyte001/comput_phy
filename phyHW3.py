@@ -48,8 +48,8 @@ def second_derivative_sin(x,h=0.01):
     print('finite difference for 2nd Dx:')
     return (np.sin(x+h)-2*np.sin(x)+np.sin(x-h))/(2*h**2)
 
-#Trapezoidal Rule of Integration
-
+# Trapezoidal Rule of Integration
+# unfinished 
 def integration_sin(a=0,b=np.pi/3):
     print('apprx integral of sin(x)')
     return ((b-a)/2) * (np.sin(a) + np.sin(b)) # trapezoid rule
