@@ -25,12 +25,12 @@ print(error,'Percent')
 
 #Error comparison for different values of h, increasing
 
-def deltah(x):
-    errorOne = ((cenDiffSin(x,0.00001) - fwdDiffSin(x,0.00001)) / cenDiffSin(x,0.00001)) * 100
-    errorTwo = ((cenDiffSin(x,0.0001) - fwdDiffSin(x,0.0001)) / cenDiffSin(x,0.0001)) * 100
-    errorThree = ((cenDiffSin(x,0.001) - fwdDiffSin(x,0.001)) / cenDiffSin(x,0.001)) * 100
-    errorFour = ((cenDiffSin(x,0.01) - fwdDiffSin(x,0.01)) / cenDiffSin(x,0.01)) * 100
-    errorFive = ((cenDiffSin(x,0.1) - fwdDiffSin(x,0.1)) / cenDiffSin(x,0.1)) * 100
+def error(x):
+    errorOne = ((cenDiffSin(x,0.00001) - fwdDiffSin(x,0.00001)) 
+    errorTwo = ((cenDiffSin(x,0.0001) - fwdDiffSin(x,0.0001)) 
+    errorThree = ((cenDiffSin(x,0.001) - fwdDiffSin(x,0.001))
+    errorFour = ((cenDiffSin(x,0.01) - fwdDiffSin(x,0.01)) 
+    errorFive = ((cenDiffSin(x,0.1) - fwdDiffSin(x,0.1))
     print(errorOne)
     print(errorTwo)
     print(errorThree)
@@ -38,8 +38,8 @@ def deltah(x):
     print(errorFive)
     #format these for 4 decimal places
     #make into a graph
-print('Percent Accuracy')
-deltah(x)
+print('Margin of Error')
+error(x)
 print('-----------------------------------------')
 
 #finite difference for second derivative
@@ -51,7 +51,7 @@ def second_derivative_sin(x,h=0.01):
 # Trapezoidal Rule of Integration
 # unfinished 
 def trapezoid():
-    trapezoid_rule = np.sum(np.array([2*np.sqrt(1-(x**2)) for i in range(i,N)]))
+    trapezoid_rule = np.sum(np.array([2*np.sqrt(1-(x**2)) for i in range(1,N)]))
     return ((b-a)/2) * np.sqrt(1-(a**2)) + np.sqrt(1-(b**2)) + trapezoid_rule
 
 print(second_derivative_sin(x))
