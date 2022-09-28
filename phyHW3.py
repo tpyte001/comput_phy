@@ -50,9 +50,9 @@ def second_derivative_sin(x,h=0.01):
 
 # Trapezoidal Rule of Integration
 # unfinished 
-def integration_sin(a=0,b=np.pi/3):
-    print('apprx integral of sin(x)')
-    return ((b-a)/2) * (np.sin(a) + np.sin(b)) # trapezoid rule
+def trapezoid():
+    trapezoid_rule = np.sum(np.array([2*np.sqrt(1-(x**2)) for i in range(i,N)]))
+    return ((b-a)/2) * np.sqrt(1-(a**2)) + np.sqrt(1-(b**2)) + trapezoid_rule
 
 print(second_derivative_sin(x))
 print(integration_sin())
