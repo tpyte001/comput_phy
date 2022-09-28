@@ -1,20 +1,25 @@
 import numpy as np
 
-def fwdDiffSin(x,h=0.01):
-    return (np.sin(x+h) - np.sin(x)) / h
-
-def cenDiffSin(x,h=0.01):
-    return (np.sin(x+h) - np.sin(x-h)) / (2*h)
 
 x = np.pi/3
 
+#forward difference of sin(x)
+def fwdDiffSin(x,h=0.01):
+    return (np.sin(x+h) - np.sin(x)) / h
+
+#Central difference of sin(x)
+def cenDiffSin(x,h=0.01):
+    return (np.sin(x+h) - np.sin(x-h)) / (2*h)
+
+#test
 print(fwdDiffSin(x))
 print(cenDiffSin(x))
 
+#Percent error of central difference to forward difference
 error = ((cenDiffSin(x) - fwdDiffSin(x)) / cenDiffSin(x)) * 100
 print(error,'Percent') 
 
-
+#Error comparison for different values of h, increasing
 def deltah(x):
     errorOne = ((cenDiffSin(x,0.00001) - fwdDiffSin(x,0.00001)) / cenDiffSin(x,0.00001)) * 100
     errorTwo = ((cenDiffSin(x,0.0001) - fwdDiffSin(x,0.0001)) / cenDiffSin(x,0.0001)) * 100
@@ -27,7 +32,12 @@ def deltah(x):
     print(errorFour)
     print(errorFive)
     #format these for 4 decimal places
-    
+    #make into a graph
 print('Percent Accuracy')
 deltah(x)
+
+#finite difference for second derivative
+def second_derivative_sin(x):
+    return (sin(x+h)-2*sin(x)+sin(x-h)) / (2*h)
+    
 
