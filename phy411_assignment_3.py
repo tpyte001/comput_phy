@@ -21,7 +21,7 @@ print(trapezoid())
 
 def error_values(x=4):
     delta_input_list = [0.01,0.001,0.0001,0.00001]
-    for h in range(3):
+    for h in range(4):
         return back_diff(4,delta_input_list[h]) - cent_diff(4,delta_input_list[h]) 
     
 print(error_values())
