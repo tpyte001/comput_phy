@@ -1,5 +1,0 @@
-# Week 4 Homework
-- write function to calculate taylor series using brute force
-- taylor expand x + h and x - h and calculate the second derivative, so you can solve for it
-  and use it to optimize function runtime
-- derive the formula to calculate an integral and try to get it to 6 function calculations
